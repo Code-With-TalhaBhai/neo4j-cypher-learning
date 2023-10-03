@@ -3,6 +3,10 @@
 MATCH (n) REQUIRE (n) -----> Get All Nodes with their Relationships
 
 
+// Query All Nodes and Match `name` property and return
+MATCH (t {name:"Joel Embiid"}) RETURN t;
+
+
 MATCH (player:PLAYER) RETURN player
 
 
