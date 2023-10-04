@@ -7,9 +7,10 @@ MATCH (n) REQUIRE (n) -----> Get All Nodes with their Relationships
 MATCH (t {name:"Joel Embiid"}) RETURN t;
 
 
+// Query all `PLAYER` nodes
 MATCH (player:PLAYER) RETURN player
 
-
+// Query all   `PLAYER` nodes property  `name`
 MATCH (player:PLAYER) RETURN player.name as Name;
 
 
@@ -17,6 +18,7 @@ MATCH (player:PLAYER)
 RETURN player.name as Name, player.weight as Weight;
 
 
+// Query all `PLAYER` with `name` `Luka Doncic`
 MATCH (player:PLAYER) 
 WHERE player.name = "Luka Doncic"
 RETURN player;
@@ -30,7 +32,7 @@ WHERE player.weight >= 100
 RETURN player; 
 
 
-
+// Query all `Player` whose `name` not equal to `James Harden`
 MATCH (player:PLAYER) 
 WHERE player.name <> "James Harden"
 RETURN player;
@@ -39,7 +41,7 @@ RETURN player;
 MATCH (player:PLAYER) WHERE (player.weight * 2) < 200 RETURN player;
 
 
-
+// Query all `Player` whose `weight` less than '100' and `age` less than equal to '30'
 MATCH (player:PLAYER) WHERE player.weight < 100 AND player.age <= 30  RETURN player;
 
 

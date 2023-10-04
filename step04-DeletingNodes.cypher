@@ -3,7 +3,6 @@
 MATCH (t {name:"Joel Embiid"}) DETACH DELETE t;
 
 
-name: Kevin Durant
 
 // Deleting Relationship
 MATCH (player:PLAYER{name:"James Harden"}) -[rel:TEAMMATES]-> (Teammate:PLAYER) DELETE rel;
